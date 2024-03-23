@@ -77,3 +77,97 @@
 2024-03-22,17:45:13 [CRITICAL] (app.py:app:173): Exiting on signal 2...
 2024-03-22,17:45:13 [INFO] (app.py:app:179): Shutting down TabPy...
 2024-03-22,17:45:13 [INFO] (app.py:app:179): Shutting down TabPy...
+2024-03-22,18:33:32 [INFO] (app.py:app:300): Parsing config file /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tabpy/tabpy_server/app/../common/default.conf
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter port set to "9004" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter server_version set to "2.9.0" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter evaluate_enabled set to "True" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter evaluate_timeout set to "30" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter upload_dir set to "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tabpy/tmp/query_objects" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter transfer_protocol set to "http" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:268): Parameter certificate_file is not set
+2024-03-22,18:33:32 [DEBUG] (app.py:app:268): Parameter key_file is not set
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter state_file_path set to "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tabpy/tabpy_server" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter static_path set to "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tabpy/tabpy_server/static" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:268): Parameter TABPY_PWD_FILE is not set
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter log_request_context set to "false" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter max_request_size_in_mb set to "100" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter gzip_enabled set to "True" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter arrow_enabled set to "False" from default value
+2024-03-22,18:33:32 [DEBUG] (app.py:app:261): Parameter arrowflight_port set to "13622" from default value
+2024-03-22,18:33:32 [INFO] (app.py:app:363): Setting max request size to 104857600 bytes
+2024-03-22,18:33:32 [INFO] (app.py:app:527): Loading state from state file /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tabpy/tabpy_server/state.ini
+2024-03-22,18:33:32 [DEBUG] (app.py:app:379): Static pages folder set to "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tabpy/tabpy_server/static"
+2024-03-22,18:33:51 [INFO] (app.py:app:492): Password file is not specified: Authentication is not enabled
+2024-03-22,18:33:51 [INFO] (app.py:app:411): Call context logging is disabled
+2024-03-22,18:33:51 [INFO] (app.py:app:181): Initializing TabPy...
+2024-03-22,18:33:51 [DEBUG] (selector_events.py:selector_events:64): Using selector: KqueueSelector
+2024-03-22,18:33:51 [INFO] (callbacks.py:callbacks:43): Initializing TabPy Server...
+2024-03-22,18:33:51 [DEBUG] (state.py:state:613): Loading option 'None' from section [Query Objects Service Versions]...
+2024-03-22,18:33:51 [DEBUG] (state.py:state:635): Returning value '[]'
+2024-03-22,18:33:51 [DEBUG] (state.py:state:148): Collected endpoints: {}
+2024-03-22,18:33:51 [INFO] (app.py:app:185): Done initializing TabPy.
+2024-03-22,18:33:51 [INFO] (callbacks.py:callbacks:64): Initializing models...
+2024-03-22,18:33:51 [DEBUG] (state.py:state:613): Loading option 'None' from section [Query Objects Service Versions]...
+2024-03-22,18:33:51 [DEBUG] (state.py:state:635): Returning value '[]'
+2024-03-22,18:33:51 [DEBUG] (state.py:state:148): Collected endpoints: {}
+2024-03-22,18:33:51 [INFO] (app.py:app:151): Web service listening on port 9004
+2024-03-22,18:34:56 [INFO] (web.py:web:2348): 200 GET / (::1) 15.28ms
+2024-03-22,18:34:56 [DEBUG] (base_handler.py:base_handler:115): Checking if need to handle authentication
+2024-03-22,18:34:56 [DEBUG] (base_handler.py:base_handler:115): Handling authentication
+2024-03-22,18:34:56 [INFO] (base_handler.py:base_handler:115): Authentication is not a required feature for API "v1"
+2024-03-22,18:34:56 [DEBUG] (base_handler.py:base_handler:115): Checking request headers for authentication data
+2024-03-22,18:34:56 [INFO] (base_handler.py:base_handler:115): Authorization header not found
+2024-03-22,18:34:56 [DEBUG] (base_handler.py:base_handler:115): authentication not required, username and password are none
+2024-03-22,18:34:56 [DEBUG] (state.py:state:511): Collecting Access-Control-Allow-Origin from state file ...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Origin' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Headers' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Methods' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Description' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Creation Time' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value '0'
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Name' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value 'TabPy Server'
+2024-03-22,18:34:56 [INFO] (web.py:web:2348): 200 GET /info (::1) 2.43ms
+2024-03-22,18:34:56 [DEBUG] (base_handler.py:base_handler:115): Checking if need to handle authentication
+2024-03-22,18:34:56 [DEBUG] (base_handler.py:base_handler:115): Handling authentication
+2024-03-22,18:34:56 [INFO] (base_handler.py:base_handler:115): Authentication is not a required feature for API "v1"
+2024-03-22,18:34:56 [DEBUG] (base_handler.py:base_handler:115): Checking request headers for authentication data
+2024-03-22,18:34:56 [INFO] (base_handler.py:base_handler:115): Authorization header not found
+2024-03-22,18:34:56 [DEBUG] (base_handler.py:base_handler:115): authentication not required, username and password are none
+2024-03-22,18:34:56 [INFO] (web.py:web:2348): 200 GET /tableau.png (::1) 1.64ms
+2024-03-22,18:34:56 [DEBUG] (state.py:state:511): Collecting Access-Control-Allow-Origin from state file ...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Origin' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Headers' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Methods' from section [Service Info]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:34:56 [DEBUG] (state.py:state:613): Loading option 'None' from section [Query Objects Service Versions]...
+2024-03-22,18:34:56 [DEBUG] (state.py:state:635): Returning value '[]'
+2024-03-22,18:34:56 [DEBUG] (state.py:state:148): Collected endpoints: {}
+2024-03-22,18:34:56 [INFO] (web.py:web:2348): 200 GET /endpoints (::1) 1.49ms
+2024-03-22,18:34:56 [WARNING] (web.py:web:2348): 404 GET /favicon.ico (::1) 0.52ms
+2024-03-22,18:35:44 [DEBUG] (base_handler.py:base_handler:115): Checking if need to handle authentication
+2024-03-22,18:35:44 [DEBUG] (base_handler.py:base_handler:115): Handling authentication
+2024-03-22,18:35:44 [INFO] (base_handler.py:base_handler:115): Authentication is not a required feature for API "v1"
+2024-03-22,18:35:44 [DEBUG] (base_handler.py:base_handler:115): Checking request headers for authentication data
+2024-03-22,18:35:44 [INFO] (base_handler.py:base_handler:115): Authorization header not found
+2024-03-22,18:35:44 [DEBUG] (base_handler.py:base_handler:115): authentication not required, username and password are none
+2024-03-22,18:35:44 [DEBUG] (state.py:state:511): Collecting Access-Control-Allow-Origin from state file ...
+2024-03-22,18:35:44 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Origin' from section [Service Info]...
+2024-03-22,18:35:44 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:35:44 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Headers' from section [Service Info]...
+2024-03-22,18:35:44 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:35:44 [DEBUG] (state.py:state:613): Loading option 'Access-Control-Allow-Methods' from section [Service Info]...
+2024-03-22,18:35:44 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:35:44 [DEBUG] (state.py:state:613): Loading option 'Description' from section [Service Info]...
+2024-03-22,18:35:44 [DEBUG] (state.py:state:635): Returning value ''
+2024-03-22,18:35:44 [DEBUG] (state.py:state:613): Loading option 'Creation Time' from section [Service Info]...
+2024-03-22,18:35:44 [DEBUG] (state.py:state:635): Returning value '0'
+2024-03-22,18:35:44 [DEBUG] (state.py:state:613): Loading option 'Name' from section [Service Info]...
+2024-03-22,18:35:44 [DEBUG] (state.py:state:635): Returning value 'TabPy Server'
+2024-03-22,18:35:44 [INFO] (web.py:web:2348): 200 GET /info (::1) 14.52ms
