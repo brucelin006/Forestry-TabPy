@@ -1,9 +1,7 @@
 import os
 import re
-from typing import NoReturn
 import pandas as pd
 
-PATH_TO_LIVE_TREES = "live_trees_1705681447.csv"
 PATH_TO_ODD_TREES = "odd_trees_1705681447.csv"
 
 
@@ -21,6 +19,7 @@ def preprocess_data(filepath: str, selected_columns: list[str]) -> None:
 
     # # Check the count of null values in each column
     null_counts = selected_df.isnull().sum()
+
     print("Found # of null values: ", null_counts[null_counts > 0], end="\n")
 
     cleaned_df = selected_df.dropna()
@@ -28,12 +27,3 @@ def preprocess_data(filepath: str, selected_columns: list[str]) -> None:
 
     # # Export the clean data as csv
     cleaned_df.to_csv(output_filename + ".csv", index=False)
-
-
-preprocess_data(
-    PATH_TO_LIVE_TREES,
-    ["PlotKey", "TreeKey", "SpeciesCode", "DBH", "TotalHeight", "Age_BH"],
-)
-preprocess_data(
-    PATH_TO_ODD_TREES, ["PlotKey", "TreeKey", "SpeciesCode", "DBH", "TotalHeight"]
-)
