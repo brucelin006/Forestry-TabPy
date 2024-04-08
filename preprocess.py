@@ -1,3 +1,7 @@
+"""
+Authors: Gaici Lin, Gia Ky Huynh
+"""
+
 import os
 import re
 import pandas as pd
@@ -17,7 +21,7 @@ def preprocess_data(filepath: str, selected_columns: list[str]) -> None:
 
     selected_df = df[selected_columns]
 
-    # # Check the count of null values in each column
+    # Check the count of null values in each column
     null_counts = selected_df.isnull().sum()
 
     print("Found # of null values: ", null_counts[null_counts > 0], end="\n")
@@ -25,5 +29,5 @@ def preprocess_data(filepath: str, selected_columns: list[str]) -> None:
     cleaned_df = selected_df.dropna()
     print(cleaned_df.info(), "\n")
 
-    # # Export the clean data as csv
+    # Export the clean data as csv
     cleaned_df.to_csv(output_filename + ".csv", index=False)
