@@ -6,11 +6,9 @@ import os
 import re
 import pandas as pd
 
-PATH_TO_ODD_TREES = "odd_trees_1705681447.csv"
 
-
-def preprocess_data(filepath: str, selected_columns: list[str]) -> None:
-    # Get file name and define the output file name
+def preprocess_data(filepath: str, selected_columns: list[str]) -> str:
+    # Get file name and define the output file name, e.g.live_trees_1705681447.csv -> live_tress.csv
     base_name: str = os.path.basename(filepath)
     print("==========", base_name, "==========")
     match = re.match(r"(.+?)_\d+\.csv$", base_name)
@@ -29,5 +27,9 @@ def preprocess_data(filepath: str, selected_columns: list[str]) -> None:
     cleaned_df = selected_df.dropna()
     print(cleaned_df.info(), "\n")
 
+    export_filename = output_filename + ".csv"
+
     # Export the clean data as csv
-    cleaned_df.to_csv(output_filename + ".csv", index=False)
+    cleaned_df.to_csv(export_filename, index=False)
+
+    return export_filename

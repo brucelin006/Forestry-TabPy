@@ -1,48 +1,41 @@
-import pandas as pd
+from analysis import analyze
+from preprocess import preprocess_data
 
-PATH_TO_LIVE_TREES = "live_trees_1705681447.csv"
+# The path of the source csv file that needs to be processed and plot onto Tableau
+paths = ["live_trees_1705681447.csv", "odd_trees_1705681447.csv"]
 
 
-# Load dataset
-df = pd.read_csv(PATH_TO_LIVE_TREES)
-# Filter columns: Exclude columns that end with 'Key' or 'Code'
-filtered_columns = [
-    col
-    for col in df.columns
-    if not col.endswith("Key")
-    and not col.endswith("Code")
-    and not col.lower().endswith("limit")
-    and not col.endswith("Class")
-]
-# Calculate correlations
-corr_matrix = df[filtered_columns].corr(numeric_only=True)
-# Flatten the Correlation Matrix
-corr_series = corr_matrix.unstack()
-# Remove Self-Correlations
-corr_series = corr_series[
-    corr_series.index.get_level_values(0) != corr_series.index.get_level_values(1)
-]
-# Sort by Absolute Values
-sorted_series = corr_series.abs().sort_values(ascending=False).drop_duplicates()
-# Discard correlations with coefficient of 1 and get the first 3 results
-strong_corr_columns = sorted_series.head(5)
-print("==========strong_corr_columns==========")
-print(strong_corr_columns)
-print()
+def main():
+    for path in paths:
+        # preprocess the dataset
+        if path.startswith("live_"):
+            processed_file_path = preprocess_data(
+                path,
+                selected_columns=[
+                    "PlotKey",
+                    "TreeKey",
+                    "SpeciesCode",
+                    "DBH",
+                    "TotalHeight",
+                    "Age_BH",
+                ],
+            )
+        elif path.startswith("odd_"):
+            processed_file_path = preprocess_data(
+                path,
+                selected_columns=[
+                    "PlotKey",
+                    "TreeKey",
+                    "SpeciesCode",
+                    "DBH",
+                    "TotalHeight",
+                ],
+            )
+        else:
+            raise FileNotFoundError("File not exists")
+        # analyze the dataset
+        analyze(processed_file_path)
 
-# Extract unique column names from the pairs
-unique_columns = set()
-for pair in strong_corr_columns.keys():
-    unique_columns.update(pair)
-print("==========unique_columns==========")
-print(unique_columns)
-print()
 
-strong_corr_df = df[list(unique_columns)]
-print("==========strong_corr_df==========")
-print(strong_corr_df.head())
-print()
-
-print("==========strong_corr_df null values==========")
-print(strong_corr_df.isna().sum())
-print()
+if __name__ == "__main__":
+    main()
