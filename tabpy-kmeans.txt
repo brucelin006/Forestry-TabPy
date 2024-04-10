@@ -1,0 +1,13 @@
+SCRIPT_INT("
+from sklearn.cluster import KMeans
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+X = np.column_stack([_arg1, _arg2, _arg3])
+df = pd.DataFrame(X, columns=['Office Ring Count', 'HeightToCore', 'Sound Wood Length'])
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df.dropna())
+kmeans = KMeans(n_clusters=3)
+return kmeans.fit_predict(df_scaled).tolist()
+",
+ATTR([Office Ring Count]), ATTR([Height To Core]), ATTR([Sound Wood Length]), 3)
