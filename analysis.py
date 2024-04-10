@@ -1,3 +1,7 @@
+"""
+Authors: Gaici Lin, Gia Ky Huynh
+"""
+
 from pprint import pprint
 import pandas as pd
 

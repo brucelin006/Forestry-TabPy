@@ -1,3 +1,6 @@
+"""
+Authors: Gaici Lin, Gia Ky Huynh
+"""
 from analysis import analyze
 from preprocess import preprocess_data
 
