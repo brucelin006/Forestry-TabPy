@@ -8,31 +8,10 @@ paths = ["live_trees_1705681447.csv", "odd_trees_1705681447.csv"]
 def main():
     for path in paths:
         # preprocess the dataset
-        if path.startswith("live_"):
-            processed_file_path = preprocess_data(
-                path,
-                selected_columns=[
-                    "PlotKey",
-                    "TreeKey",
-                    "SpeciesCode",
-                    "DBH",
-                    "TotalHeight",
-                    "Age_BH",
-                ],
-            )
-        elif path.startswith("odd_"):
-            processed_file_path = preprocess_data(
-                path,
-                selected_columns=[
-                    "PlotKey",
-                    "TreeKey",
-                    "SpeciesCode",
-                    "DBH",
-                    "TotalHeight",
-                ],
-            )
+        if path.endswith(".csv"):
+            processed_file_path = preprocess_data(path)
         else:
-            raise FileNotFoundError("File not exists")
+            raise ValueError("File not accepted")
         # analyze the dataset
         analyze(processed_file_path)
 
